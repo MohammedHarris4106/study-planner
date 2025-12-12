@@ -9,7 +9,7 @@ import authRoutes from './routes/authRoutes.js';
 import studyPlanRoutes from './routes/studyPlanRoutes.js';
 
 const app = express();
-app.use(cors());
+app.use(cors({"origin": "*"}));
 app.use(express.json());
 
 app.use('/api', authRoutes);
